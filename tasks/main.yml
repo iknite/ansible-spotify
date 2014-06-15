@@ -1,12 +1,9 @@
 ---
 - name: Add key
-  apt_key: id={{spotify_apt_key.id}} keyserver={{spotify_apt_key.keyserver}}
+  apt_key: keyserver=keyserver.ubuntu.com id=94558F59
 
 - name: Add repository
-  apt_repository: repo={{ spotify_apt_repository.repo }}
+  apt_repository: repo='deb http://repository.spotify.com stable non-free'
 
-- name: Update cache
-  apt: update_cache=yes
-
-- name: Install spotify!
-  apt: name={{spotify_package.name}}
+- name: Install spotify
+  apt: name=spotify-client update_cache=yes state=latest

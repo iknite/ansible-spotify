@@ -9,7 +9,7 @@ DRY motto 2: `I want to test the full cycle of ansible-galaxy with something int
 Usage
 -----
 ```sh
-wget -qO- https://raw.github.com/iknite/ansible-spotify/master/install.sh | bash
+wget -qO- https://raw.github.com/iknite/ansible-spotify/master/install.sh | sudo bash
 ```
 
 that does the following:
@@ -22,7 +22,7 @@ cat <<EOF > /tmp/spoty-role.yml
 ---
 - hosts: 127.0.0.1
   connection: local
-  user: root
+  sudo: yes
   roles:
 	- iknite.spotify
 EOF

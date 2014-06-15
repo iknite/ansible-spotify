@@ -6,7 +6,7 @@ cat <<EOF > /tmp/spoty-role.yml
 ---
 - hosts: 127.0.0.1
   connection: local
-  user: root
+  sudo: yes
   roles:
     - iknite.spotify
 EOF

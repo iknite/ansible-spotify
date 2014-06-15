@@ -5,7 +5,7 @@ allow_duplicates: no
 
 galaxy_info:
   author: Enrique Paredes
-  description: Local install spotify FTW!
+  description: Install spotify client FTW!
   license: 3-clause BSD license.
   min_ansible_version: 1.6
   platforms:
