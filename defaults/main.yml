@@ -1,0 +1,7 @@
+---
+spotify_apt_key: { keyserver: keyserver.ubuntu.com, id: 94558F59 }
+
+spotify_apt_repository: { repo: 'deb http://repository.spotify.com stable non-free' }
+
+spotify_package: spotify-client
+
