@@ -9,9 +9,11 @@ DRY motto 2: I want to test the full cycle of ansible-galaxy with something mean
 Usage
 -----
 
+.. code-block::
+
     wget -qO- https://raw.github.com/iknite/ansible-spotify/master/install.sh | bash
 
-that does the following:
+that does the following::
 
     #!/usr/bin/env bash
     ansible-galaxy install iknite.spotify
@@ -33,6 +35,8 @@ that does the following:
 
 Configure
 ---------
+
+.. code-block::
 
     spotify_apt_key: { keyserver: keyserver.ubuntu.com, id: 94558F59 }
 
