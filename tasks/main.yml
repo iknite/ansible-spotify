@@ -1,15 +1,12 @@
 ---
 - name: Add key
-  apt_key: id={{item.key}} keyserver={{item.keyserver}}
-  with_items: spotify_apt_key
+  apt_key: id={{spotify_apt_key.id}} keyserver={{spotify_apt_key.keyserver}}
 
 - name: Add repository
-  apt_repository: repo={{ item.repo }}
-  with_items: spotify_apt_repository
+  apt_repository: repo={{ spotify_apt_repository.repo }}
 
 - name: Update cache
   apt: update_cache=yes
 
 - name: Install spotify!
-  apt: name:{{item.name}}
-  with_items: spotify_package
+  apt: name={{spotify_package.name}}

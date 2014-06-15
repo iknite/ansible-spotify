@@ -11,7 +11,7 @@ cat <<EOF > /tmp/spoty-role.yml
     - iknite.spotify
 EOF
 
-sudo ansible-playbook /tmp/spoty-role.yml
+ansible-playbook /tmp/spoty-role.yml
 
 rm /tmp/spoty-role.yml
 
