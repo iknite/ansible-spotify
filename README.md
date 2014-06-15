@@ -22,34 +22,25 @@ cat <<EOF > /tmp/spoty-role.yml
 ---
 - hosts: 127.0.0.1
   connection: local
-  sudo: yes
   roles:
 	- iknite.spotify
 EOF
 
-sudo ansible-playbook /tmp/spoty-role.yml
+ansible-playbook /tmp/spoty-role.yml
 
 rm /tmp/spoty-role.yml
 
 ansible-galaxy remove iknite.spotify
 ```
 
-Configure
----------
+Prerequisites
+-------------
+ansible `sudo pip install ansible`
 
-```yaml
-spotify_apt_key: { keyserver: keyserver.ubuntu.com, id: 94558F59 }
-
-spotify_apt_repository: { repo: 'deb http://repository.spotify.com stable non-free' }
-
-spotify_package: spotify-client
-```
-
-CONTRIBUTING
+Contributing
 ------------
 
 git clone git@github.com:iknite/ansible-spotify
 
-LICENSE: 3-clause BSD license.
 ---
-Copyright © 2014, Enrique Paredes
+3-clause BSD license.  Copyright © 2014, Enrique Paredes
