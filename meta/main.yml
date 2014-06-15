@@ -8,9 +8,10 @@ galaxy_info:
   description: Local install spotify FTW!
   license: 3-clause BSD license.
   min_ansible_version: 1.6
+  platforms:
     - name: Ubuntu
       versions:
-        all
+        - all
   categories:
     - system
 
