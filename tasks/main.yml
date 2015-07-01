@@ -1,6 +1,9 @@
 ---
-- name: Add key
-  apt_key: keyserver=keyserver.ubuntu.com id=94558F59
+- name: Add apt keys
+  apt_key: keyserver=keyserver.ubuntu.com id={{ item }}
+  with_items:
+    - 94558F59
+    - D2C19886
 
 - name: Add repository
   apt_repository: repo='deb http://repository.spotify.com stable non-free'
