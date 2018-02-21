@@ -1,9 +1,6 @@
 ---
 - name: Add Apt Keys
-  apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id={{ item }} state=present
-  with_items:
-    - BBEBDCB318AD50EC6865090613B00F1FD2C19886
-    - 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+  apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=0DF731E45CE24F27EEEB1450EFDC8610341D9410 state=present
 
 - name: Add repository
   apt_repository: repo='deb http://repository.spotify.com stable non-free'
