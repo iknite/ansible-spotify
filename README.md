@@ -1,7 +1,7 @@
 spotify
 =======
 
-DRY motto 1: `I don't have enought memory nor time to search this again`
+DRY motto 1: `I don't have enough memory nor time to search this again`
 
 DRY motto 2: `I want to test the full cycle of ansible-galaxy with something interesting`
 
